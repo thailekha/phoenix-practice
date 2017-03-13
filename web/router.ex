@@ -28,6 +28,11 @@ defmodule HelloPhoenix.Router do
     resources "/comments", CommentController, except: [:delete]
   end
 
+  #scope "/admin" same as scope "/dmin"
+  scope "/admin" do
+    pipe_through :browser
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloPhoenix do
   #   pipe_through :api
