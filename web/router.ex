@@ -31,12 +31,12 @@ defmodule HelloPhoenix.Router do
   end
 
   #scope "/admin" same as scope "/dmin"
-  scope "/admin" do
+  scope "/admin", HelloPhoenix.Admin, as: :admin do
     pipe_through :browser
 
-    resources "/images",  HelloPhoenix.Admin.ImageController
-    resources "/reviews", HelloPhoenix.Admin.ReviewController
-    resources "/users",   HelloPhoenix.Admin.UserController
+    resources "/images",  ImageController
+    resources "/reviews", ReviewController
+    resources "/users",   UserController
   end
 
   # Other scopes may use custom stacks.
