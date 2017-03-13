@@ -37,6 +37,12 @@ defmodule HelloPhoenix.Router do
     resources "/images",  ImageController
     resources "/reviews", ReviewController
     resources "/users",   UserController
+
+    scope "/v1", V1, as: :v1 do
+      resources "/images",  ImageController
+      resources "/reviews", ReviewController
+      resources "/users",   UserController
+    end
   end
 
   # Other scopes may use custom stacks.
