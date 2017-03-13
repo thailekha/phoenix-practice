@@ -32,7 +32,7 @@ defmodule HelloPhoenix.Router do
 
   #scope "/admin" same as scope "/dmin"
   scope "/admin", HelloPhoenix.Admin, as: :admin do
-    pipe_through :browser
+    pipe_through :api
 
     resources "/images",  ImageController
     resources "/reviews", ReviewController
