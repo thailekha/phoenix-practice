@@ -40,4 +40,5 @@ config :hello_phoenix, HelloPhoenix.Repo,
   password: "postgres",
   database: "hello_phoenix_dev",
   hostname: "localhost",
+  encoding: "SQL_ASCII",
   pool_size: 10

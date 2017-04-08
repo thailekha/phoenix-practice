@@ -1,0 +1,67 @@
+    1  lsb_release -a
+    2  uname -i
+    3  sudo add-apt-repository ppa:openjdk-r/ppa
+    4  sudo apt-get update
+    5  sudo apt-get install openjdk-7-jdk
+    6  sudo apt-get install openjdk-7-jre
+    7  wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+    8  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    9  sudo apt-get update
+   10  sudo apt-get install jenkins
+
+   20  dpkg --print-architecture
+
+   54  netstat -anp | grep 8080
+
+  133  sudo systemctl is-enabled jenkins
+
+  134  journalctl
+
+  136  journalctl | grep oom
+  137  journalctl | grep jenkins
+
+  141  systemctl daemon-reload
+
+  152  locate jdk
+  153  whereis java
+  154  ls -l /usr/bin/java
+  155  ls -l /etc/alternatives/java
+  156  locate java
+  157  ls -l /etc/alternatives/java
+
+  160  sudo nano /etc/environment 
+
+  166  source /etc/environment 
+  167  sudo service jenkins star
+
+  200  echo "deb http://packages.erlang-solutions.com/debian jessie contrib" | sudo tee /etc/apt/sources.list.d/erlang-solutions.list
+  201  wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc
+  202  sudo apt-key add erlang_solutions.asc
+  203  sudo apt update
+  204  sudo apt install elixir
+
+  214  sudo apt-get install wget
+  215  sudo apt-get install libssl-dev
+  216  sudo apt-get install ncurses-dev
+  217  wget http://www.erlang.org/download/otp_src_19.3.tar.gz
+  218  tar -xzvf otp_src_19.3.tar.gz
+  219  cd otp_src_19.3/
+  220  ./configure 
+  221  make
+  222  sudo make install
+  223  cd ..
+  224  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+  225  export NVM_DIR="$HOME/.nvm"
+  226  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+  230  nvm install v6.10.2
+
+# repo
+
+  244  mix deps.get
+  268  mix ecto.create
+  269  cd config/
+  270  nano dev.exs 
+  272  mix ecto.create
+       npm install
+  273  mix phoenix.server
